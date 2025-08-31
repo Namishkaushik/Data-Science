@@ -56,7 +56,7 @@
 - [ ] Transfer Learning  
 - [ ] Frameworks: TensorFlow, PyTorch    
 
-### 🔟 Big Data & Cloud :
+### 1️⃣0️⃣ Big Data & Cloud :
 - [ ] Hadoop & Spark basics  
 - [ ] Cloud for Data Science (AWS/GCP/Azure basics)  
 - [ ] Data pipelines & ETL  
