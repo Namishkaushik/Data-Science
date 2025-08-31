@@ -58,7 +58,7 @@
 
 ### 1️⃣0️⃣ Big Data & Cloud :
 - [ ] Hadoop & Spark basics  
-- [ ] Cloud for Data Science (AWS/GCP/Azure basics)  
+- [ ] Cloud for Data Science (AWS)  
 - [ ] Data pipelines & ETL  
 
 ### 1️⃣1️⃣ Data Science Projects : 
