@@ -56,12 +56,12 @@
 - [ ] Transfer Learning  
 - [ ] Frameworks: TensorFlow, PyTorch    
 
-### 1️⃣0️⃣ Big Data & Cloud :
+### 9️⃣ Big Data & Cloud :
 - [ ] Hadoop & Spark basics  
 - [ ] Cloud for Data Science (AWS)  
 - [ ] Data pipelines & ETL  
 
-### 1️⃣1️⃣ Data Science Projects : 
+### 🔟 Data Science Projects : 
 - [ ] EDA (Exploratory Data Analysis)  
 - [ ] Case studies (Titanic survival, House price prediction, Sentiment analysis)  
 - [ ] End-to-end ML pipeline projects  
