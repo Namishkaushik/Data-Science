@@ -13,7 +13,7 @@
 ### 2️⃣ Python for Data Science : 
 - [ ] Python basics (variables, loops, functions)  
 - [ ] Data structures (lists, tuples, sets, dicts)  
-- [ ] Libraries: NumPy, Pandas, Matplotlib, Seaborn  
+- [ ] Libraries: NumPy, Pandas 
 - [ ] Data cleaning & preprocessing  
 
 ### 3️⃣ Mathematics for Data Science :
