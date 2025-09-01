@@ -13,6 +13,8 @@ Python is a **high-level, interpreted programming language** developed by ***Gui
 ## 2️⃣ Python Syntax:
 
 ### 🖨 Print & Comments:
+`print()` is a **built-in function** in Python that **outputs text, numbers, variables, or any other data** to the standard output device (usually your monitor). <br>
+While, a `comment` is a line in the code that Python **ignores** while running the program.
 ```python
 # This is a comment
 print("Hello, Data Science!")  # Prints text
