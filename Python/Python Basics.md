@@ -31,7 +31,7 @@ is_student = True # boolean
 ```
 Here **x, y, name, is_student** are variables. They are assigned values of different data types as mentioned in the code bloc.
 ## 3️⃣ Operators:
-Operators are special symbols in Python that perform operations on values or variables.
+Operators are **special symbols** in Python that **perform operations** on values or variables.
 They tell Python what kind of action to perform. There are various types of operators:
 
 ### ✏️ Assignment Operators:
