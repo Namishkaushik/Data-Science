@@ -66,33 +66,59 @@ We have many kinds of Arithmetic Operators:
 a = 10
 b = 3
 ```
-#### Addition (+):
-It adds 'a' and 'b'
-```python
-print(a + b) 
-```
-👆 It basically means:
-```python
-print(10 + 3) # Assigned the values of 'a' and 'b'.
-  # Answer - 13
-```
-#### Subtraction (-):
-It subtracts 'b' from 'a'.
-```python
-print(a - b)
-```
-Now, it will assign the values of 'a' and 'b'.
-```python
-print(10 - 3)
-  # Answer - 7
-```
-print(a * b)  # Multiplication - It multilies 'a' and 'b'.
-print(a / b)  # Division - It divides 'a' from 'b'.
-print(a // b) # Floor Division - It divides 'a' from 'b' and rounds the answer (towards negative infinity) to the nearest whole number.
-print(a % b)  # Modulus - It returns the remainder after dividing 'a' by 'b'.
-print(a ** b) # Exponential - It means 'raise to the power of', it multiplies 'a' by itself ,'b' number of times
-```
-In the above code bloc, we can see that we **assigned values** to **'a' and 'b'**. Then, we performed the **arithmetic operations on 'a' and 'b'**. 
-So, basically this is what we are trying to do:
-```python
-print(10+3) # 
+- #### Addition (+):
+    It adds 'a' and 'b'
+    ```python
+    print(a + b) 
+    ```
+    👆 It basically means:
+    ```python
+    print(10 + 3) # Assigned the values of 'a' and 'b'.
+      # Answer - 13
+    ```
+
+- #### Subtraction (-):
+    It subtracts 'b' from 'a'.
+    ```python
+    print(a - b)
+    ```
+    Now, it will assign the values of 'a' and 'b'.
+    ```python
+    print(10 - 3)
+      # Answer - 7
+    ```
+
+- #### Multiplication (*):
+    It multilies 'a' and 'b'.
+    ```python
+    print(a * b)
+    ```
+    Output : 30
+
+- #### Division (/):
+    It divides 'a' from 'b'.
+    ```python
+    print(a / b)
+    ```
+    Output : 3.3333333333333335
+
+- #### Floor Division (//):
+    It divides 'a' from 'b' and rounds the answer (towards negative infinity) to the nearest whole number.
+    ```python
+    print(a // b) 
+    ```
+    Output : 3
+
+- #### Modulus (%):
+    It returns the remainder after dividing 'a' by 'b'.
+    ```python
+    print(a % b)
+    ```
+    Output : 1
+
+- #### Exponential (**):
+    It means 'raise to the power of', it multiplies 'a' by itself ,'b' number of times
+    ```python
+    print(a ** b)
+    ```
+    Output : 1000
