@@ -29,18 +29,18 @@ y = 3.14        # float
 name = "Namish" # string
 is_student = True # boolean
 ```
-Here **x, y, name, is_student** are variables. They are assigned values of different data types as mentioned in the code bloc.
+Here **x, y, name, is_student** are variables. They are assigned values of different data types as mentioned in the code block.
 ## 3️⃣ Operators:
 Operators are **special symbols** in Python that **perform operations** on values or variables.
 They tell Python what kind of action to perform. There are various types of operators:
 
 ### ✏️ Assignment Operators:
-These operators basdically **assign values to the variables**.  <br>
+These operators basically **assign values to the variables**.  <br>
 **For Example:**
 ```python
 x = 10 # value '10' is assigned to variable 'x'
 ```
-This was the basic assignment operator. It can be also be **combined with differnt arithmetic operators** to perform and assign values. <br>
+This was the basic assignment operator. It can be also be **combined with different arithmetic operators** to perform and assign values. <br>
 **For Example:**
 ```python
 x+=1 # This basically means x = x+1
@@ -89,21 +89,21 @@ b = 3
     ```
 
 - #### Multiplication (*):
-    It multilies 'a' and 'b'.
+    It multiplies 'a' and 'b'.
     ```python
     print(a * b)
     ```
     Output : 30
 
 - #### Division (/):
-    It divides 'a' from 'b'.
+    It divides 'a' by 'b'.
     ```python
     print(a / b)
     ```
     Output : 3.3333333333333335
 
 - #### Floor Division (//):
-    It divides 'a' from 'b' and rounds the answer (towards negative infinity) to the nearest whole number.
+    It divides 'a' by 'b' and rounds the answer (towards negative infinity) to the nearest whole number.
     ```python
     print(a // b) 
     ```
@@ -117,7 +117,7 @@ b = 3
     Output : 1
 
 - #### Exponential (**):
-    It means 'raise to the power of', it multiplies 'a' by itself ,'b' number of times
+    It means 'raise to the power of', i.e., 'a' raised to the power 'b'.
     ```python
     print(a ** b)
     ```
