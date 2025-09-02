@@ -3,7 +3,7 @@
 Python is a **high-level, interpreted programming language** developed by ***Guido van Rossum in 1991***. It is widely used in Data Science because of its simplicity and powerful libraries.
 
 ---
-## Why Python is Good for Data Science?
+## 🤔 Why Python is Good for Data Science?
 
 Python is extremely popular for **Data Science** because of its simplicity, versatility, and rich ecosystem of libraries.
 
