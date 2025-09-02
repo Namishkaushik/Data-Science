@@ -122,3 +122,128 @@ b = 3
     print(a ** b)
     ```
     Output : 1000
+
+  
+### ⚖️ Comparison Operators:
+Comparison operators (also called **relational operators**) are used to **compare two values**.
+They return either `True` or `False` (Boolean result).<br><br>
+***List of Comparison Operators:***
+
+| Operator | Meaning                  | Example   | Result   |
+|----------|--------------------------|-----------|----------|
+| `==`     | Equal to                 | `5 == 5`  | `True`   |
+| `!=`     | Not equal to             | `5 != 3`  | `True`   |
+| `>`      | Greater than             | `5 > 3`   | `True`   |
+| `<`      | Less than                | `5 < 3`   | `False`  |
+| `>=`     | Greater than or equal to | `5 >= 5`  | `True`   |
+| `<=`     | Less than or equal to    | `3 <= 5`  | `True`   |
+
+***Example in python:***
+```python
+x = 10
+y = 20
+
+# Statement     # Output
+
+print(x == y)   # False
+print(x != y)   # True
+print(x > y)    # False
+print(x < y)    # True
+print(x >= 10)  # True
+print(y <= 15)  # False
+```
+They are mostly used when you want to check conditions, often inside `if` and `while loops`.
+
+
+### 🔗 Logical Operators:
+Logical operators are used to **combine conditional statements**. They return either `True` or `False` (Boolean result).
+<br><br>
+***Types of Logical Operators:***
+
+| Operator | Meaning                                              | Example                  | Result |
+|----------|------------------------------------------------------|--------------------------|--------|
+| `and`    | Returns `True` if **both** conditions are true       | `(5 > 2 and 10 > 3)`     | `True` |
+| `or`     | Returns `True` if **at least one** condition is true | `(5 > 2 or 10 < 3)`      | `True` |
+| `not`    | Reverses the result (True → False, False → True)     | `not(5 > 2)`             | `False` |
+
+***For Example:***
+```python
+x = 5
+y = 10
+
+# Statement              # Output
+
+print(x > 2 and y > 5)   # True  (both conditions are True)
+print(x > 2 or y < 5)    # True  (one condition is True)
+print(not(x > 2))        # False (because x > 2 is True, but not makes it False)
+```
+
+### ⚙️ Bitwise Operators:
+Bitwise operators work on **binary (bit-level) representations** of numbers.
+<br><br>
+***Types of Bitwise Operators:***
+| Operator | Name        | Description                              | Example | Result |
+|----------|-------------|------------------------------------------|---------|--------|
+| `&`      | AND         | Sets each bit to 1 if both bits are 1    | `5 & 3` | `1` |
+| `\|`      | OR          | Sets each bit to 1 if one of the bits is 1 | `5 \| 3` | `7` |
+| `^`      | XOR         | Sets each bit to 1 if only one bit is 1  | `5 ^ 3` | `6` |
+| `~`      | NOT         | Inverts all the bits (2’s complement form) | `~5` | `-6` |
+| `<<`     | Left Shift  | Shifts bits left (adds zeros on right)   | `5 << 1` | `10` |
+| `>>`     | Right Shift | Shifts bits right (drops bits on right)  | `5 >> 1` | `2` |
+
+***Example:***
+```python
+a = 5    # 0101 in binary
+b = 3    # 0011 in binary
+
+# Statement    # Output
+
+print(a & b)   # 1  (0001)
+print(a | b)   # 7  (0111)
+print(a ^ b)   # 6  (0110)
+print(~a)      # -6 (inverts bits of 5)
+print(a << 1)  # 10 (1010)
+print(a >> 1)  # 2  (0010)
+```
+
+### 🆔 Identity Operator:
+Identity operators check whether **two objects are the same in memory**, not just equal in value.
+<br><br>
+***Types of Identity Operators:***
+| Operator | Description | Example | Result |
+|----------|-------------|---------|--------|
+| `is`     | Returns True if both variables point to the same object | `x is y` | `True` / `False` |
+| `is not` | Returns True if they do **not** point to the same object | `x is not y` | `True` / `False` |
+
+***Example:***
+```python
+x = [1, 2, 3]
+y = [1, 2, 3]
+z = x
+
+# Statement        # Output
+
+print(x is y)      # False (different objects in memory)
+print(x is z)      # True  (same memory reference)
+print(x is not y)  # True
+```
+
+
+### 🧩 Membership Operator:
+Membership operators test whether a **value exists in a sequence** (string, list, tuple, etc.).
+<br> <br>
+***Types of Membership Operator:***
+| Operator | Description | Example | Result |
+|----------|-------------|---------|--------|
+| `in`     | Returns True if value is found in sequence | `"a" in "apple"` | `True` |
+| `not in` | Returns True if value is NOT found in sequence | `5 not in [1, 2, 3]` | `True` |
+
+***Example:***
+```python
+fruits = ["apple", "banana", "cherry"]
+
+# Statement                   # Output
+print("apple" in fruits)      # True
+print("grape" not in fruits)  # True
+print("z" in "pizza")         # True (string membership check)
+```
