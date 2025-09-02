@@ -74,7 +74,7 @@ b = 3
     👆 It basically means:
     ```python
     print(10 + 3) # Assigned the values of 'a' and 'b'.
-      # Answer - 13
+      # Output - 13
     ```
 
 - #### Subtraction (-):
@@ -85,43 +85,48 @@ b = 3
     Now, it will assign the values of 'a' and 'b'.
     ```python
     print(10 - 3)
-      # Answer - 7
+      # Output - 7
     ```
 
 - #### Multiplication (*):
     It multiplies 'a' and 'b'.
     ```python
     print(a * b)
+    # Output : 30
     ```
-    Output : 30
+    
 
 - #### Division (/):
     It divides 'a' by 'b'.
     ```python
     print(a / b)
+    # Output : 3.3333333333333335
     ```
-    Output : 3.3333333333333335
+    
 
 - #### Floor Division (//):
     It divides 'a' by 'b' and rounds the answer (towards negative infinity) to the nearest whole number.
     ```python
-    print(a // b) 
+    print(a // b)
+    # Output : 3
     ```
-    Output : 3
+    
 
 - #### Modulus (%):
     It returns the remainder after dividing 'a' by 'b'.
     ```python
     print(a % b)
+    # Output : 1
     ```
-    Output : 1
+    
 
 - #### Exponential (**):
     It means 'raise to the power of', i.e., 'a' raised to the power 'b'.
     ```python
     print(a ** b)
+    # Output : 1000
     ```
-    Output : 1000
+    
 
   
 ### ⚖️ Comparison Operators:
@@ -175,7 +180,7 @@ y = 10
 
 print(x > 2 and y > 5)   # True  (both conditions are True)
 print(x > 2 or y < 5)    # True  (one condition is True)
-print(not(x > 2))        # False (because x > 2 is True, but not makes it False)
+print(not(x > 2))        # False (because x > 2 is True, because 'not' inverts the result)
 ```
 
 ### ⚙️ Bitwise Operators:
@@ -187,7 +192,7 @@ Bitwise operators work on **binary (bit-level) representations** of numbers.
 | `&`      | AND         | Sets each bit to 1 if both bits are 1    | `5 & 3` | `1` |
 | `\|`      | OR          | Sets each bit to 1 if one of the bits is 1 | `5 \| 3` | `7` |
 | `^`      | XOR         | Sets each bit to 1 if only one bit is 1  | `5 ^ 3` | `6` |
-| `~`      | NOT         | Inverts all the bits (2’s complement form) | `~5` | `-6` |
+| `~`      | NOT         | Inverts all the bits  | `~5` | `-6` |
 | `<<`     | Left Shift  | Shifts bits left (adds zeros on right)   | `5 << 1` | `10` |
 | `>>`     | Right Shift | Shifts bits right (drops bits on right)  | `5 >> 1` | `2` |
 
