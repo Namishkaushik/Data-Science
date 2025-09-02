@@ -89,7 +89,7 @@ b = 3
     ```
 
 - #### Multiplication (*):
-    It multiplies 'a' and 'b'.
+    It multiplies 'a' by 'b'.
     ```python
     print(a * b)
     # Output : 30
