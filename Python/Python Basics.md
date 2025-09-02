@@ -47,7 +47,7 @@ Python’s simplicity, rich libraries, versatility, and strong community make it
 
 
 ---
-# ⚡ Sarting with PYTHON...
+# ⚡ Starting with PYTHON...
 
 ## 1️⃣ Python Setup:
 - Install **Python** from [python.org](https://www.python.org/) or use **Anaconda** for data science.  
