@@ -76,18 +76,21 @@ is_student = True # boolean
 ```
 Here **x, y, name, is_student** are variables. They are assigned values of different data types as mentioned in the code block.
 
+---
 
 ## 3️⃣ Operators:
 Operators are **special symbols** in Python that **perform operations** on values or variables.
 They tell Python what kind of action to perform. There are various types of operators:
 
 ### ✏️ Assignment Operators:
-These operators basically **assign values to the variables**.  <br>
+These operators basically **assign values to the variables**.  
+
 **For Example:**
 ```python
 x = 10 # value '10' is assigned to variable 'x'
 ```
-This was the basic assignment operator. It can be also be **combined with different arithmetic operators** to perform and assign values. <br>
+This was the basic assignment operator. It can be also be **combined with different arithmetic operators** to perform and assign values.
+
 **For Example:**
 ```python
 x+=1 # This basically means x = x+1
@@ -105,6 +108,7 @@ x+=1 # This basically means x = x+1
 | `**=`    | `x **= 2` | `x = x ** 2`      |
 | `//=`    | `x //= 2` | `x = x // 2`      |
 
+---
 
 ### 🔢 Arithmetic Operator:
 Arithmetic operators in Python are the symbols we use to perform mathematical operations on numbers.
@@ -174,11 +178,13 @@ b = 3
     # Output : 1000
     ```
     
-
+---
   
 ### ⚖️ Comparison Operators:
 Comparison operators (also called **relational operators**) are used to **compare two values**.
-They return either `True` or `False` (Boolean result).<br><br>
+They return either `True` or `False` (Boolean result).
+
+
 ***List of Comparison Operators:***
 
 | Operator | Meaning                  | Example   | Result   |
@@ -206,10 +212,12 @@ print(y <= 15)  # False
 ```
 They are mostly used when you want to check conditions, often inside `if` and `while loops`.
 
+---
 
 ### 🔗 Logical Operators:
 Logical operators are used to **combine conditional statements**. They return either `True` or `False` (Boolean result).
-<br><br>
+
+
 ***Types of Logical Operators:***
 
 | Operator | Meaning                                              | Example                  | Result |
@@ -230,9 +238,12 @@ print(x > 2 or y < 5)    # True  (one condition is True)
 print(not(x > 2))        # False (because x > 2 is True, because 'not' inverts the result)
 ```
 
+---
+
 ### ⚙️ Bitwise Operators:
 Bitwise operators work on **binary (bit-level) representations** of numbers.
-<br><br>
+
+
 ***Types of Bitwise Operators:***
 | Operator | Name        | Description                              | Example | Result |
 |----------|-------------|------------------------------------------|---------|--------|
@@ -258,9 +269,12 @@ print(a << 1)  # 10 (1010)
 print(a >> 1)  # 2  (0010)
 ```
 
+---
+
 ### 🆔 Identity Operator:
 Identity operators check whether **two objects are the same in memory**, not just equal in value.
-<br><br>
+
+
 ***Types of Identity Operators:***
 | Operator | Description | Example | Result |
 |----------|-------------|---------|--------|
@@ -280,10 +294,12 @@ print(x is z)      # True  (same memory reference)
 print(x is not y)  # True
 ```
 
+---
 
 ### 🧩 Membership Operator:
 Membership operators test whether a **value exists in a sequence** (string, list, tuple, etc.).
-<br> <br>
+
+
 ***Types of Membership Operator:***
 | Operator | Description | Example | Result |
 |----------|-------------|---------|--------|
@@ -299,3 +315,154 @@ print("apple" in fruits)      # True
 print("grape" not in fruits)  # True
 print("z" in "pizza")         # True (string membership check)
 ```
+
+---
+
+## 4️⃣ Control Flow in Python:
+Control flow decides the order in which code executes.
+
+### ✅ If-Else Statements:
+In Python, `if-else` statements are **used for decision making**.
+They allow your program to **execute certain code only if a condition is true**, and optionally execute another block if the condition is false.
+
+***Syntax:***
+```python
+if condition:
+    # code to run if condition is True
+else:
+    # code to run if condition is False
+```
+
+***Example:***
+```python
+age = 18
+
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")
+
+# Output - "You are an adult."
+```
+
+***🌲 If-Elif-Else Chain:***
+
+When you have multiple conditions, you can use **`elif`** (short for *else if*).
+
+```python
+marks = 75
+
+if marks >= 90:
+    print("Grade: A")
+elif marks >= 75:
+    print("Grade: B")
+elif marks >= 50:
+    print("Grade: C")
+else:
+    print("Grade: F")
+
+# Output - "Grade: B"
+```
+
+---
+
+### 🔁 Loops:
+In Python, `loops` are used to **repeat a block of code multiple times** until a condition is met.
+They help you avoid writing the same code again and again.
+
+***🔄 for loop*** 
+
+A for loop is used to **iterate over a sequence** (like a list, tuple, string, dictionary, or range) and execute a block of code for each element in that sequence.
+
+It’s mainly used when you know **how many times you want to repeat something.**
+
+***Syntax:***
+```python
+for i in sequence:
+    # code block
+```
+ - Here, **i** is a **variable** that takes the value of each element in the sequence (one at a time).
+ - And, **sequence** → the collection (list, string, range, etc.) you want to loop through.
+
+***Example:***
+```python
+for i in range(5):
+    print(i)
+
+# Output:
+0
+1
+2
+3
+4
+```
+
+***🔂 while loop***
+
+A while loop in Python is used to **repeat a block of code as long as a condition is `True`**.
+ - The condition is checked before each iteration.
+ - If the condition becomes False, the loop stops.
+
+***Syntax***
+```python
+while condition:
+    # code block
+```
+**condition** → an expression that returns `True` or `False`.
+ - If it’s True, the loop runs.
+ - If it’s False, the loop ends.
+
+***Example:***
+```python
+count = 0
+
+while count < 5:
+    print(count)
+    count += 1
+
+# Output:
+0
+1
+2
+3
+4
+```
+
+***->Infinite Loop***
+
+If the condition is **always True**, the loop will **never stop** unless a `break` is used.
+
+```python
+while True:
+    print("This runs forever!")
+    break
+```
+
+***🌀 Loop Control Statements:***
+
+- **break** → Exits the loop immediately.  
+- **continue** → Skips the current iteration and moves to the next one.  
+- **pass** → Does nothing (used as a placeholder).  
+
+***Example:***
+```python
+for i in range(5):
+    if i == 2:
+        continue  # skip 2
+    if i == 4:
+        break     # stop loop at 4
+    print(i)
+
+# Output:
+0
+1
+3
+
+```
+
+***👉 Key Points***
+- Use **for loop** when you know how many times to repeat.  
+- Use **while loop** when you don’t know in advance and depend on a condition.  
+- Loops make code **shorter, cleaner, and reusable**
+
+---
