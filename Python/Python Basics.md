@@ -466,3 +466,25 @@ for i in range(5):
 - Loops make code **shorter, cleaner, and reusable**
 
 ---
+
+## 🛠️ Python Functions:
+Functions are **blocks of reusable code** that perform a specific task. They help in making programs **modular, maintainable, and readable**.
+
+### 🤨 Why use functions?
+- Avoids code repetition
+- Makes code modular
+- Increases readability
+- Easy to debug and test
+- Supports reusability
+
+### ✍️ Defining a Function:
+In Python, a function is defined using the `def` keyword.
+
+Syntax:
+
+```python
+def function_name(parameters):
+    """docstring (optional)"""
+    # code block
+    return value
+```
