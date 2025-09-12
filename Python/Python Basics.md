@@ -603,6 +603,12 @@ There are several types of Arguments :-
         print(f"{key}: {value}")
 
     student_info(name="Namish", age=20, course="Python")
+
+    # Output:
+    # name: Namish
+    # age: 20
+    # course: Python
+
     ```
 
 ### 🎭 Anonymous Function(Lambda):
