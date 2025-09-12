@@ -488,3 +488,134 @@ def function_name(parameters):
     # code block
     return value
 ```
+### 📞 Calling a Function:
+```python
+def greet():
+    print("Hello, Python!")
+
+greet()  # Function call
+```
+Here, we defined a function called **greet()** in the first line. So, when we called it in the last line, it will go back to the funtion and print whatever was defined in it. 
+
+Like in this example, when we call the greet() function, it will print - ```Hello, Python!``` - as it was defined in the function.
+
+### 📦 Functions with Parameters:
+In Python finctions, **Parameters** are the <u>variables</u> that are defined in a function to **accept input values** when the function is called. They act as placeholders for the data you want the function to work with.
+
+
+While **Argument** is the actual value passed when calling a function.
+
+```python
+def greet(name): # name - parameter
+    print(f"Hello, {name}!")
+
+greet("Namish") # Namish - argument
+
+# Output:
+Hello, Namish!
+```
+Here, we defined a parameter called "name". And then we passed the argument "Namish" while calling the function.
+
+### ⚡ Function with return value:
+```python
+def add(a, b):
+    return a + b # return statement used
+
+result = add(5, 10)
+print("Sum:", result)
+
+# Output:
+Sum: 15
+```
+###  📝 Types of Function Argumens:
+There are several types of Arguments :-
+1. ***Positional Arguments:***
+    - The values a passed in order, matching the function's parameters.
+    - **Order matters**
+    ```python
+    def divide(a, b):
+        return a / b
+
+    print(divide(10, 2))  
+
+    # Output:
+    5.0
+    ```
+2. ***Keyword Arguments:***
+    - Values are passed using *Parameter values*
+    - **Order doesn't matter**
+    ```python
+    def student(name, age):
+        print(f"Name: {name}, Age: {age}")
+
+    student(age=20, name="Namish")
+
+    # Output:
+    # Name: Namish, Age: 20
+    ```
+3. ***Default Arguments:***
+    - Parameters can have **default values**
+    - If no argument is passed, then the default value is used.
+    ```python
+    def power(base, exp=2):
+    return base ** exp
+
+    print(power(5))    
+    print(power(5, 3)) 
+
+    # Output:
+    25
+    125
+    ```
+4. ***Variable - Length Arguments:***
+    - They are used when you **don't know** in advanced, that **how many arguments will be passed**.
+    - ```*args``` (arguments) is used in function definitions to allow the function to **accept any number of positional arguments** and **pack them in a tuple** called ```args```.<br>
+    - ```**kwargs```(keyword arguments) is used in function defination to allow the function to **accept any number of named arguments** and **packs them in a dictionary** called ```kwargs```.
+    
+    <u>**Example-1:  (*args)**</u>
+    ```python
+    def sum_all(*args):
+    return sum(args)
+
+    print(sum_all(1, 2, 3, 4, 5)) 
+
+    # Output:
+    15
+    ```
+    <u>**Example-2: (*args)**</u>
+    ```python
+    def greet_all(*names):
+    for name in names:
+        print(f"Hello, {name}!")
+
+    greet_all("Namish", "Karan", "Lucky")
+
+    # Output:
+
+    # Hello, Namish!
+    # Hello, Karan!
+    # Hello, Lucky!
+    ```
+    <u>**Example-3 (\**kwargs)**</u>
+    ```python
+    def student_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+    student_info(name="Namish", age=20, course="Python")
+    ```
+
+### 🎭 Anonymous Function(Lambda):
+An **anonymous function** in Python, also called a **lambda** function, is a *small, unnamed function* defined using the ```lambda``` keyword. Unlike regular functions defined with def, a **lambda function can have any number of arguments** but **only a single expression**, whose result is automatically returned. Lambda functions are typically used for short, throwaway operations, often as arguments to higher-order functions like map(), filter(), and reduce().
+
+**Syntax:**
+```python
+lambda arguments: expression
+```
+**Example:**
+```python
+square = lambda x: x ** 2
+print(square(5))  
+
+# Output: 25
+```
