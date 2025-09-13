@@ -318,7 +318,187 @@ print("z" in "pizza")         # True (string membership check)
 
 ---
 
-## 4️⃣ Control Flow in Python:
+## 4️⃣ Data Structures in Python:
+Data Structures are **ways to organize and store data** so that they can be used efficiently.  
+Python provides several built-in data structures, and you can also create custom ones.
+
+### 🔹 Types of Data Structures
+
+1. **Primitive Data Structures**  
+   - Integers (`int`)  
+   - Floats (`float`)  
+   - Strings (`str`)  
+   - Booleans (`bool`)  
+
+2. **Non-Primitive (or Abstract) Data Structures**  
+   - Built-in: **List, Tuple, Set, Dictionary**  
+   - User-defined: **Stack, Queue, Linked List, Tree, Graph, Hash Table**
+
+### 🟦 Lists
+
+- A **list** in Python is an **ordered, mutable (changeable), and iterable collection** that can hold items of different data types (integers, strings, floats, objects, even other lists). Lists are one of Python’s most commonly used data structures.  
+
+- It is defined with `[]`.
+
+Some common operations:-
+```python
+fruits = ["apple", "banana", "cherry"]  # Defining a list.
+# ['apple', 'banana', 'cherry']
+
+# --- Adding ---
+fruits.append("mango")   # It adds "mango" at the last.
+# ['apple', 'banana', 'cherry', 'mango']
+
+fruits.insert(1, "orange")   # It inserts "orange" at index '1'.
+# ['apple', 'orange', 'banana', 'cherry', 'mango']
+
+# --- Removing ---
+fruits.remove("banana")   # removes by value
+# ['apple', 'orange', 'cherry', 'mango']
+
+popped = fruits.pop()     # removes last element ("mango")
+# ['apple', 'orange', 'cherry']
+
+del fruits[0]             # deletes element at index 0 ("apple")
+# ['orange', 'cherry']
+
+# --- Updating ---
+fruits[1] = "grapes"      # modifies element at index 1
+# ['orange', 'grapes']
+
+# --- Checking ---
+print("apple" in fruits)  
+# False  (since "apple" was deleted earlier)
+```
+
+### 🟨 Tuples
+- A **tuple** is a built-in Python data structure that is very *similar to a list*, but with one key difference: **tuples are immutable** (the values cannot be changed).
+- They are **faster then list** as they are immutable.
+- It is defined with `()`.
+
+Some common operations:
+```python
+# Defining a tuple
+fruits = ("apple", "banana", "cherry", "apple")
+
+# --- Accessing ---
+print(fruits[0])       # apple  (first element)
+print(fruits[-1])      # cherry (last element)
+print(fruits[1:3])     # ('banana', 'cherry') (slicing)
+
+# --- Checking ---
+print("apple" in fruits)   # True
+print("mango" in fruits)   # False
+
+# --- Counting & Index ---
+print(fruits.count("apple"))   # 2 (number of times "apple" appears)
+print(fruits.index("banana"))  # 1 (first index of "banana")
+
+# --- Length ---
+print(len(fruits))   # 4
+
+# --- Concatenation ---
+t1 = (1, 2, 3)
+t2 = (4, 5)
+print(t1 + t2)       # (1, 2, 3, 4, 5)
+
+# --- Repetition ---
+print(t1 * 2)        # (1, 2, 3, 1, 2, 3)
+
+# --- Nesting ---
+nested = (t1, t2)
+print(nested)        # ((1, 2, 3), (4, 5))
+
+# --- Converting to List (to modify) ---
+temp = list(fruits)
+temp[1] = "grapes"
+fruits = tuple(temp)
+print(fruits)        # ('apple', 'grapes', 'cherry', 'apple')
+```
+
+### 🟥 Dictionaries
+A **dictionary** is a built-in Python data structure that **stores data as key–value pairs**. It is:
+- Unordered (Python 3.6+ maintains insertion order, but logically dicts are unordered)
+- Mutable (can add, remove, or update items)
+- Indexed by keys (not positions like lists/tuples)
+- Unique keys (each key must be unique, but values can repeat)
+
+Some common functions:
+```python
+# Defining a dictionary
+student = {"name": "Namish", "age": 20, "course": "Python"}
+
+# --- Accessing ---
+print(student["name"])         # Namish
+print(student.get("age"))      # 20
+print(student.get("grade", "N/A"))  # N/A (default if key not found)
+
+# --- Adding / Updating ---
+student["age"] = 21            # Update value
+student["city"] = "Delhi"      # Add new key-value pair
+# {'name': 'Namish', 'age': 21, 'course': 'Python', 'city': 'Delhi'}
+
+# --- Removing ---
+student.pop("course")          # Removes 'course'
+del student["city"]            # Removes 'city'
+removed = student.popitem()    # Removes last inserted pair (tuple)
+student.clear()                # Empties dictionary
+
+# --- Checking ---
+print("name" in student)       # True (checks key)
+print("Namish" in student.values())  # True (checks value)
+
+# --- Looping ---
+student = {"name": "Namish", "age": 20, "course": "Python"}
+for key in student:
+    print(key, student[key])   # Access by key
+
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+# --- Useful Functions ---
+print(student.keys())     # dict_keys(['name', 'age', 'course'])
+print(student.values())   # dict_values(['Namish', 20, 'Python'])
+print(student.items())    # dict_items([('name', 'Namish'), ('age', 20), ('course', 'Python')])
+
+print(len(student))       # 3
+```
+
+### 🟪 Stack
+A **stack** is a **linear data structure** that follows the principle:
+
+👉 **LIFO (Last In, First Out)**
+- The last element added (pushed) is the first one removed (popped).
+- Imagine a stack of plates: you put one on top, and the last plate placed is the first one you take off.
+
+✅ **Stack Operations:**
+- Push → Add an element to the top
+- Pop → Remove the top element
+- Peek / Top → View the top element without removing it
+- isEmpty → Check if the stack is empty
+
+📌 **Implementation using List:**
+```python
+stack = []  # empty stack
+
+# Push
+stack.append(10)
+stack.append(20)
+stack.append(30)
+print("Stack after pushes:", stack)  
+# [10, 20, 30]
+
+# Pop
+print("Popped:", stack.pop())  # 30
+print("Stack now:", stack)     # [10, 20]
+
+# Peek (last element)
+print("Top element:", stack[-1])  # 20
+
+# Check if empty
+print("Is stack empty?", len(stack) == 0)  # False
+```
+## 5️⃣ Control Flow in Python:
 Control flow decides the order in which code executes.
 
 ### ✅ If-Else Statements:
@@ -467,7 +647,7 @@ for i in range(5):
 
 ---
 
-## 5️⃣ Python Functions:
+##  6️⃣ Python Functions:
 Functions are **blocks of reusable code** that perform a specific task. They help in making programs **modular, maintainable, and readable**.
 
 ### 🤨 Why use functions?
@@ -710,3 +890,32 @@ Python follows the LEGB rule to decide the scope:
 
     outer()  # Output: 10
     ```
+
+### 🌀 Recursion:
+It is basically a function calling itself.
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))  # 120
+```
+
+### Built-in functions:
+- **len()** → Length of object
+- **max(), min()** → Largest and smallest
+- **sum()** → Sum of iterable
+- **sorted()** → Sorts a sequence
+- **map(), filter(), reduce()** → Functional programming tools
+
+Example:
+```python
+nums = [1, 2, 3, 4, 5]
+
+squares = list(map(lambda x: x**2, nums))
+evens = list(filter(lambda x: x % 2 == 0, nums))
+
+print("Squares:", squares)
+print("Evens:", evens)
+```
