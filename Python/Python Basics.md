@@ -467,7 +467,7 @@ for i in range(5):
 
 ---
 
-## 🛠️ Python Functions:
+## 5️⃣ Python Functions:
 Functions are **blocks of reusable code** that perform a specific task. They help in making programs **modular, maintainable, and readable**.
 
 ### 🤨 Why use functions?
@@ -625,3 +625,88 @@ print(square(5))
 
 # Output: 25
 ```
+
+### 🎯 Nested Functions:
+A **nested function** is a function **defined inside another function.**
+
+The outer function can call the inner one, and the inner function can access variables from the outer function (thanks to enclosing scope).
+```python
+def outer():
+    message = "Hello from outer!"
+
+    def inner():
+        print(message)  # inner() can access outer()'s variable
+
+    inner()  # Call inner function
+
+outer()
+
+
+# Output: Hello from outer!
+```
+
+### 🏛️ Scope of Variables:
+The **scope of a variable** refers to the region of the program where that variable is **accessible and can be used**.
+
+Python follows the LEGB rule to decide the scope:
+- **L - Local Variable** - Variables defined inside a function, accessible only within that function.
+    ```python
+    def func():
+        x = 10  # Local variable
+        print(x)
+
+    func()
+    print(x)  # ❌ Error: x not accessible outside
+    ```
+- **E - Enclosing Scope** - Variables in the outer (enclosing) function for nested functions.
+    ```python
+    def outer():
+        y = 20
+        def inner():
+            print(y)  # Access enclosing variable
+        inner()
+
+    outer()  # Output: 20
+    ```
+- **G - Global Variable** - Variables defined at the top level of a script or module, accessible anywhere inside functions (if not shadowed).
+    ```python
+    z = 30  # Global variable
+
+    def show():
+        print(z)
+
+    show()  # Output: 30
+    print(z) # Output: 30 (As it is accesible outside)
+    ```
+- **B - Built-in Scope** - Names pre-defined by Python (like len, print, range).
+    ```python
+    print(len([1, 2, 3]))  # len is from built-in scope
+    ```
+
+### 🌍 global and nonlocal Keywords:
+1. **global keyword** 
+- The ```global``` keyword is used to **access and modify a variable that is defined in the global scope** (outside all functions).
+- <u>Without ```global```</u>, assigning to a variable inside a function will create a <u>local variable</u> instead of changing the global one.
+    ```python
+    x = 10  # Global variable
+
+    def modify():
+        global x
+        x = 20  # Modifies the global variable
+
+    modify()
+    print(x)  # Output: 20
+    ```
+2. **nonlocal keyword** 
+- The ```nonlocal``` keyword is used inside nested functions to **modify a variable from the enclosing (outer) function scope**, not the global scope.
+    ```python
+    def outer():
+        y = 5
+        def inner():
+            nonlocal y
+            y = 10  # Modifies the variable from outer function
+        inner()
+        print(y)
+
+    outer()  # Output: 10
+    ```
