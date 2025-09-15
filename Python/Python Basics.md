@@ -90,6 +90,8 @@ You can also add data types in front of input, to restrict the entry of the data
 age = int(input("Enter the age: "))
 print("The age is:", age)
 ```
+This will now take the input only in integer form.
+
 ### 📝 Variables & Data Types:
 Variable is like a **container** that is used to store data in your program.
   - It doesn’t need explicit declaration of type (Python figures it out automatically).
