@@ -57,12 +57,38 @@ Python’s simplicity, rich libraries, versatility, and strong community make it
 
 ## 2️⃣ Python Syntax:
 
-### 🖨 Print & Comments:
+### 🖨 print() & Comments:
 `print()` is a **built-in function** in Python that **outputs text, numbers, variables, or any other data** to the standard output device (usually your monitor). <br>
 While, a `comment` is a line in the code that Python **ignores** while running the program.
 ```python
 # This is a comment
 print("Hello, Data Science!")  # Prints text
+```
+
+### 📥 input() function:
+`input()` is a **built-in function** that:
+- Displays a prompt message (optional).
+- Waits for the user to type something.
+- Returns the input as a string.
+
+**Example:**
+```python
+name = input("Enter your name: ")
+print("Hello,", name)
+```
+If user types **Namish**, the output will be:
+
+```python
+Enter your name: Namish
+Hello, Namish
+```
+
+You can also add data types in front of input, to restrict the entry of the data to a particular data type.
+
+**For Example:**
+```python
+age = int(input("Enter the age: "))
+print("The age is:", age)
 ```
 ### 📝 Variables & Data Types:
 Variable is like a **container** that is used to store data in your program.
