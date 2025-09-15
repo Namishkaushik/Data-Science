@@ -340,6 +340,8 @@ Python provides several built-in data structures, and you can also create custom
 
 - It is defined with `[]`.
 
+- Use when you need ordered collection with flexibility.
+
 Some common operations:-
 ```python
 fruits = ["apple", "banana", "cherry"]  # Defining a list.
@@ -375,6 +377,7 @@ print("apple" in fruits)
 - A **tuple** is a built-in Python data structure that is very *similar to a list*, but with one key difference: **tuples are immutable** (the values cannot be changed).
 - They are **faster then list** as they are immutable.
 - It is defined with `()`.
+- Use when data should not change (like constants, coordinates).
 
 Some common operations:
 ```python
@@ -416,12 +419,60 @@ fruits = tuple(temp)
 print(fruits)        # ('apple', 'grapes', 'cherry', 'apple')
 ```
 
+### 🟩 Sets
+- A **set** is a built-in **unordered collection of unique elements**.
+- It is **mutable** and **hetrogeneous**.
+- Use when you need unique elements or set operations (union, intersection).
+- Defined with `{}`
+
+Creating a list:
+```python
+# Using curly braces
+my_set = {1, 2, 3, 4}
+
+# Using set() function
+another_set = set([1, 2, 2, 3, 4])  
+print(another_set)  # {1, 2, 3, 4}
+```
+Some common operations:
+```python
+A = {1, 2, 3, 4}
+B = {3, 4, 5, 6}
+
+# Add element
+A.add(10)
+
+# Remove element
+A.remove(2)   # Throws error if element not found
+A.discard(100)  # Safe remove, no error if not found
+
+# Union (combine elements)
+print(A | B)  # {1, 3, 4, 5, 6, 10}
+
+# Intersection (common elements)
+print(A & B)  # {3, 4}
+
+# Difference (elements in A but not in B)
+print(A - B)  # {1, 10}
+
+# Symmetric Difference (elements in A or B but not both)
+print(A ^ B)  # {1, 5, 6, 10}
+
+# Membership
+print(3 in A)     # True
+print(7 not in A) # True
+```
+
 ### 🟥 Dictionaries
 A **dictionary** is a built-in Python data structure that **stores data as key–value pairs**. It is:
-- Unordered (Python 3.6+ maintains insertion order, but logically dicts are unordered)
-- Mutable (can add, remove, or update items)
-- Indexed by keys (not positions like lists/tuples)
-- Unique keys (each key must be unique, but values can repeat)
+- **Unordered* (Python 3.6+ maintains insertion order, but logically dicts are unordered)
+- **Mutable** (can add, remove, or update items)
+- **Indexed by keys** (not positions like lists/tuples)
+- **Unique keys** (each key must be unique, but values can repeat)
+- **Use when you need mapping** (like ID → Data, word → meaning)
+- Defined by `{}`
+
+
 
 Some common functions:
 ```python
@@ -498,6 +549,90 @@ print("Top element:", stack[-1])  # 20
 # Check if empty
 print("Is stack empty?", len(stack) == 0)  # False
 ```
+📌 **Implementation using collections.deque**
+```python
+from collections import deque
+
+stack = deque()
+
+# Push
+stack.append(1)
+stack.append(2)
+stack.append(3)
+print("Stack after pushes:", stack)  
+# deque([1, 2, 3])
+
+# Pop
+print("Popped:", stack.pop())  # 3
+print("Stack now:", stack)     # deque([1, 2])
+```
+
+---
+>**🌀 collections.deque in Python**
+>>A deque (pronounced "deck") stands for Double-Ended Queue.
+>>>It’s a generalized queue from Python’s collections module that allows fast appends and pops from both ends. 
+---
+
+### 🟧 Queue 
+A **queue** is a linear data structure that follows the **FIFO (First In, First Out)** principle, i.e, The **first element added** is the **first one removed**.
+
+**Characteristics of a Queue:**
+- **Insertion (enqueue)** happens at the **rear (end)**.
+- **Deletion (dequeue)** happens at the **front (start)**.
+- Useful in scheduling, order processing, BFS (breadth-first search), etc.
+- Use for task scheduling, printers, order processing.
+
+**1. Implementing a Queue in Python**
+```python
+queue = []
+
+# Enqueue (add at rear)
+queue.append("A")
+queue.append("B")
+queue.append("C")
+print(queue)  # ['A', 'B', 'C']
+
+# Dequeue (remove from front)
+print(queue.pop(0))  # A
+print(queue)         # ['B', 'C']
+
+```
+
+**2. Using collections.deque (Recommended ✅)**
+```python
+from collections import deque
+
+queue = deque()
+
+# Enqueue
+queue.append("A")
+queue.append("B")
+queue.append("C")
+print(queue)  # deque(['A', 'B', 'C'])
+
+# Dequeue
+print(queue.popleft())  # A
+print(queue)            # deque(['B', 'C'])
+```
+- `deque` is faster then `list` for queues.
+
+**3. Using queue.Queue (for multi-threading)**
+```python
+from queue import Queue
+
+q = Queue()
+
+# Enqueue
+q.put("A")
+q.put("B")
+q.put("C")
+
+# Dequeue
+print(q.get())  # A
+print(q.get())  # B
+```
+
+
 ## 5️⃣ Control Flow in Python:
 Control flow decides the order in which code executes.
 
