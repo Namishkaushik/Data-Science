@@ -127,6 +127,41 @@ print(f"{a} + {b} = {a+b}")
 
 ```
 
+### Q. What is string?
+A **string** is just a sequence of characters.
+
+Characters can be:
+- Letters → `"a"`, `"hello"`
+- Numbers (as text) → `"123"`
+- Symbols → `"@#$"`
+- Even spaces → `" "`
+
+### Slicing:
+Slicing in Python is a **way to extract a portion (substring, sublist, or subsequence) from a sequence** like a string, list, or tuple.
+
+The syntax is:
+```python
+sequence[start:end:step]
+```
+- **start** → Index to start from (inclusive).
+- **end** → Index to stop at (exclusive).
+- **step** → How many steps to move after each element. Can be negative.
+
+**For Example:**
+```python
+s = "Python"
+
+print(s[0:4])    # 'Pyth'  → from index 0 to 3
+print(s[2:])     # 'thon'  → from index 2 to end
+print(s[:4])     # 'Pyth'  → from start to index 3
+print(s[::2])    # 'Pto'   → every 2nd character
+print(s[::-1])   # 'nohtyP' → reversed string
+```
+You can do the same with List and Tuple.
+
+So, **slicing is just a way to pick parts of a sequence** using indices, and with the step parameter you can even reverse it!
+
+
 ---
 
 ## 3️⃣ Operators:
