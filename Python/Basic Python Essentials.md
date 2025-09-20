@@ -104,6 +104,29 @@ is_student = True # boolean
 ```
 Here **x, y, name, is_student** are variables. They are assigned values of different data types as mentioned in the code block.
 
+### 🔹 f-string:
+An **f-string** lets you embed variables and expressions inside a string using `{ }`.
+
+```python
+name = "Namish"
+age = 19
+print(f"My name is {name} and I am {age} years old.")
+
+
+# Output : My name is Namish and I am 19 years old.
+```
+You can also evaluate expressions,
+```python
+a = 5
+b = 3
+print(f"{a} + {b} = {a+b}")
+
+
+
+# Output : 5 + 3 = 8
+
+```
+
 ---
 
 ## 3️⃣ Operators:
