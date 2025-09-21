@@ -458,6 +458,50 @@ fruits[1] = "grapes"      # modifies element at index 1
 print("apple" in fruits)  
 # False  (since "apple" was deleted earlier)
 ```
+---
+---
+> ***Q. What is list comprehension?***
+>> **List comprehension** is a concise way to create lists in Python using a **single line of code**.
+>>
+>>Instead of writing a loop + append, you can generate lists directly inside square brackets.
+>>
+>> **Syntax:**
+>>```python
+>>[expression for item in iterable if condition]
+>>```
+>> - **expression** → What to store in the list
+>> - **item** → Variable that takes values from the iterable.
+>> - **iterable** → A sequence (list, string, range, etc.)
+>> - **condition** (optional) → Filters which items to include.
+>> 
+>> **Examples:**
+>> 1. Squares of numbers(1-5): 
+>>```python
+>>squares = [x**2 for x in range(1, 6)]
+>>print(squares)   # [1, 4, 9, 16, 25]
+>>```
+>> 
+>> 2. Even numbers from 1 - 10:
+>>```python
+>>evens = [x for x in range(1, 11) if x % 2 == 0]
+>>print(evens)   # [2, 4, 6, 8, 10]
+>>```
+>> 3. First letters of words:
+>>```python
+>>words = ["apple", "banana", "cherry"]
+>>first_letters = [w[0] for w in words]
+>>print(first_letters)   # ['a', 'b', 'c']
+>>```
+>>
+>> 4. Flatten a nested list:
+>>```python
+>>matrix = [[1,2],[3,4],[5,6]]
+>>flat = [num for row in matrix for num in row]
+>>print(flat)   # [1, 2, 3, 4, 5, 6]
+>>```
+
+---
+---
 
 ### 🟨 Tuples
 - A **tuple** is a built-in Python data structure that is very *similar to a list*, but with one key difference: **tuples are immutable** (the values cannot be changed).
